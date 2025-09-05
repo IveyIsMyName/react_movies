@@ -18,7 +18,7 @@ class Main extends React.Component {
     fetchMovies = (searchTerm) => {
         this.setState({ isLoading: true, error: null });
 
-        fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=dbe5de73&s=${encodeURIComponent(searchTerm)}`)
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=dbe5de73&s=${encodeURIComponent(searchTerm)}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Ошибка сети');
